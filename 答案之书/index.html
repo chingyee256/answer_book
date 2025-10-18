@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>婧怡的答案之书 - 寻找你的答案</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 星空背景 -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 初始页面 -->
+        <div id="welcomePage" class="page active">
+            <div class="book-container">
+                <div class="book">
+                    <div class="book-cover">
+                        <h1 class="book-title">婧怡的<br/>答案之书</h1>
+                        <div class="book-decoration">
+                            <span class="star-1">✨</span>
+                            <span class="star-2">✨</span>
+                            <span class="star-3">✨</span>
+                        </div>
+                        <div class="book-subtitle">The Book of Answers</div>
+                    </div>
+                </div>
+            </div>
+            <p class="instruction">心中默念你的问题，然后点击"打开答案"。</p>
+            <button class="btn-primary" id="openAnswerBtn">
+                <span>📖 打开答案</span>
+            </button>
+            <button class="btn-secondary" id="viewCollectionBtn">
+                <span>💖 我的收藏</span>
+            </button>
+        </div>
+
+        <!-- 答案页面 -->
+        <div id="answerPage" class="page">
+            <div class="answer-container">
+                <div class="answer-card">
+                    <div class="light-effect"></div>
+                    <div class="answer-content">
+                        <p id="answerText"></p>
+                    </div>
+                    <div class="answer-decoration">✨ ✨ ✨</div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="btn-action" id="askAgainBtn">
+                    <span>🔁 再问一次</span>
+                </button>
+                <button class="btn-action" id="speakBtn">
+                    <span>🔊 朗读答案</span>
+                </button>
+                <button class="btn-action" id="favoriteBtn">
+                    <span>💖 收藏</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- 收藏页面 -->
+        <div id="collectionPage" class="page">
+            <div class="collection-container">
+                <h2 class="collection-title">💖 我的收藏</h2>
+                <div id="collectionList" class="collection-list">
+                    <!-- 收藏的答案会动态添加到这里 -->
+                </div>
+                <button class="btn-secondary" id="backFromCollectionBtn">
+                    <span>🏠 返回首页</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示消息 -->
+    <div id="toast" class="toast"></div>
+
+    <!-- 音乐控制按钮 -->
+    <button class="music-control" id="musicControl" title="背景音乐开关">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- 音频元素（支持本地音乐文件） -->
+    <audio id="bgMusic" loop preload="auto">
+        <!-- 在这里添加你的音乐文件 -->
+        <!-- 示例：<source src="music/your-music.mp3" type="audio/mpeg"> -->
+        <!-- 支持格式：mp3, ogg, wav -->
+    </audio>
+    
+    <audio id="pageFlipSound" preload="auto">
+        <!-- 翻页音效 -->
+        <!-- <source src="sounds/page-flip.mp3" type="audio/mpeg"> -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
